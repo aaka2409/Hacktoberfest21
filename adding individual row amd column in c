@@ -1,0 +1,38 @@
+#include <stdio.h>
+
+int main()
+{ int a[100][100],i,j,r,n,c,sr=0,sc=0;
+    printf("Enter no rows:");
+    scanf("%d",&r);
+    printf("Enter no. of column:");
+    scanf("%d",&c);
+    for(i=0;i<r;i++){
+        for(j=0;j<c;j++){
+            printf("Enter no. of %d%d:",i+1,j+1);
+            scanf("%d",&a[i][j]);
+        }
+    }
+    printf("Matix is:\n");
+    for(i=0;i<r;i++){
+        for(j=0;j<c;j++){
+            printf(" %d",a[i][j]);
+            if(j==r-1){
+                printf("\n");
+            }
+        }
+    }
+ for(i=0;i<r;i++){
+        for(j=0;j<c;j++){
+            sr=sr+a[i][j];
+            sc=sc+a[j][i];
+              
+        }
+    printf("Sum of row %d :%d \n",i+1,sr);
+     printf("sum of column %d :%d \n",i+1,sc); 
+    sr=0;
+    sc=0;
+ }
+ 
+    return 0;
+}
+
